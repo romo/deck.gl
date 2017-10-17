@@ -117,11 +117,17 @@ const PolygonLayerExample = {
     getFillColor: f => [200 + Math.random() * 55, 0, 0],
     getLineColor: f => [0, 0, 0, 255],
     getWidth: f => 20,
-    getHeight: f => Math.random() * 1000,
+    getElevation: f => Math.random() * 1000,
     opacity: 0.8,
     pickable: true,
-    lightSettings: LIGHT_SETTINGS
-  }
+    lightSettings: LIGHT_SETTINGS,
+    elevationScale: 0.6
+  },
+  getUpdateTriggers: settings => ({
+    getElevation: {
+      elevationScale: settings.opacity
+    }
+  })
 };
 
 const PathLayerExample = {
