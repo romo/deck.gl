@@ -122,12 +122,7 @@ const PolygonLayerExample = {
     pickable: true,
     lightSettings: LIGHT_SETTINGS,
     elevationScale: 0.6
-  },
-  getUpdateTriggers: settings => ({
-    getElevation: {
-      elevationScale: settings.opacity
-    }
-  })
+  }
 };
 
 const PathLayerExample = {
